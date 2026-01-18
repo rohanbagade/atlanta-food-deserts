@@ -2,5 +2,10 @@
 2  - type: web
 3    name: atlanta-food-deserts
 4    runtime: python
-5    buildCommand: pip install -r requirements.txt
-6    startCommand: gunicorn atlanta_food_desert_gui_render:server
+5    plan: free
+6    buildCommand: pip install -r requirements.txt
+7    startCommand: gunicorn atlanta_food_desert_gui_render:server
+8    envVars:
+9      - key: PYTHON_VERSION
+10        value: 3.11.9
+11
